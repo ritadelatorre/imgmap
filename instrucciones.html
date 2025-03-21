@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <title>Mapas de imagen</title>
+</head>
+<body>
+  <h1>Ejercicio de Mapa de Imágenes</h1>
+  <h2>Instrucciones</h2>
+  <p>A continuación encontrarás las instrucciones necesarias para que desarrolles un sitio web como el que se te muestra a continuación: <a target="_blank" href="index.html"><b>Los cinco sentidos</b></a>.</p>
+  <p>Una vez terminado tu ejercicio, crea un repositorio en Github, conviértelo en página y sube el proyecto.</p>
+  <h2>Archivos necesarios</h2>
+  <ul type="circle">
+    <li><a href="./img/bebe.png">bebe.png</a> (guardar en carpeta <code>img</code>)</li>
+    <li><a href="./css/estilos.css">estilos.css</a> (guardar en carpeta <code>css</code>)</li>
+  </ul>
+  <h2>Texto de la página</h2>
+  <details><summary><em>para copiar...</em></summary>
+    <samp>Los sentidos <br>
+    Al nacer, los seres humanos venimos al mundo con cinco sentidos que están relacionados con diferentes órganos del cuerpo y que nos permiten estar en contacto con el exterior. Los órganos son: ojos, naríz, boca, oreja y piel. <br>
+    <br>
+    Clica sobre estos órganos en el bebé para que conozcas cuáles son éstos cinco sentidos (en el caso de la piel, clica sobre sus manos!) <br>
+
+    Bebé <br>
+    <br>
+    La vista <br>
+    La vista sirve para captar los estímulos visuales. La luz entra en los ojos y se refleja en la retina, que contiene células receptivas que nos permiten ver. Para que nuestra vista funcione, la luz que captan nuestros ojos debe ser convertida en información utilizable por el cerebro. Esto nos permite diferenciar la luminosidad, el color y la distancia. <br>
+    <br>
+    El oido <br>
+    La audición es la percepción de los sonidos y del volumen mediante los oídos. En realidad, son las células ciliadas del oído las que nos permiten oír. Las vibraciones del sonido mueven los pelos de diferentes maneras, por lo que podemos distinguir los sonidos. Los oídos también son vitales para nuestro sentido del equilibrio. <br>
+    <br>
+    El olfato <br>
+    El olfato es la percepción de los humos y los olores a través de la nariz. Cuando tomamos aire por la nariz, éste pasa por las células olfativas. El cerebro reconoce, entonces, diferentes sustancias químicas en el aire y reconoce diferentes olores. <br>
+    <br>
+    El gusto <br>
+    El gusto es la percepción de los sabores mediante la boca. La razón por la que somos capaces de percibir el sabor a través de la lengua se debe a nuestras papilas gustativas. Las papilas gustativas se encuentran dentro de las papilas, que son las pequeñas protuberancias de la parte superior de la lengua que ayudan a agarrar los alimentos mientras se mastican los dientes. <br>
+    <br>
+    El tacto <br>
+    <br>
+    El tacto es la percepción de objetos físicos y texturas a través de la piel. Nuestra piel capta diferentes presiones, texturas y vibraciones y nos ayuda a averiguar qué es lo que estamos tocando. La piel es el mayor órgano sensorial de nuestro cuerpo y sus tres funciones principales son la protección, la sensación y la regulación. La piel contiene un montón de receptores sensoriales que nos permiten percibir la temperatura de la superficie, el dolor, el tacto físico y los estímulos químicos. <br></samp>
+
+
+  </details>
+  <h2>¿Cómo hacer un mapa de imágenes?</h2>
+
+    <p>Las coordenadas se conocen abriendo la imagen desde un programa como <strong>Paint</strong>. Ejemplo:</p>
+    <p><img width="600px" src="./img/mapa.png" alt="coordenadas de una imagen"></p>
+    <p>Desde <strong>Paint</strong>, las coordenadas por donde pasa el cursor se muestran en la esquina inferior izquierda (<mark>249, 350px</mark>). Hay que copiar estas coordenadas para crear un mapa de coordenadas. Éste mapa se crea con la etiqueta <code>&lt;map></code> y se le da un nombre con el atributo <code>name</code>.</p>
+    <p>En la imagen, se indica el nombre del mapa precedido por una almohadilla, con el atributo <code>usemap</code> como en el ejemplo:</p>    
+    <pre><code>
+&lt;p>&lt;img src="./img/bebe.png" alt="Bebé" usemap="#sentidos">&lt;/p>
+&lt;map name="sentidos">
+  &lt;area shape="rect" coords="129,222,227,318" href="#vista"  title="OJO" alt="vista">
+  &lt;!-- vista sería un vínculo a un marcador dentro de la misma página -->
+  &lt;area shape="rect" coords="309,223,413,317" href="#vista"  title="OJO" alt="vista">
+  &lt;area shape="rect" coords="40,226,130,365"  href="#oido"   title="OREJA" alt="oido">
+  &lt;area shape="rect" coords="422,266,493,368" href="#oido"   title="OREJA" alt="oido">
+  &lt;area shape="rect" coords="249,299,291,323" href="#olfato" title="NARIZ" alt="olfato">
+  &lt;area shape="rect" coords="249,350,287,373" href="#gusto"  title="BOCA" alt="gusto">
+  &lt;area shape="rect" coords="42,400,181,508"  href="#tacto"  title="PIEL (mano)" alt="tacto">
+  &lt;area shape="rect" coords="359,412,497,508" href="#tacto"  title="PIEL (mano)" alt="tacto">
+&lt;/map>
+    </code></pre>
+  <h3>¡ Intenta hacer tú solito/a una página similar luego de hacer el ejercicio !</h3>
+  <br>
+  <br>
+</body>
+</html>
